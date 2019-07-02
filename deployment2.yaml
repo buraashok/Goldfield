@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: v1
 kind: Deployment
 metadata:
   name: nginxserver
@@ -8,7 +8,7 @@ metadata:
     projectkey: {{ projectkey }}
     AppID: {{ AppID }}
 spec:
-  replicas: 0
+  replicas: 3
   selector:
     matchLabels:
       app: nginx
