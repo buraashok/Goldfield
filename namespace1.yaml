@@ -16,5 +16,5 @@
     when: AppID!="T001"
   - name: Generate pod template
     template:
-      src: depl.yaml
-      dest: ./namespace.yaml
+      src: deployment1.yaml
+      dest: ./deployment1.yaml
