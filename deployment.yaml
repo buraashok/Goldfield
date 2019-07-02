@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
-  namespace: {{ ns }}
+  namespace: {{ goldfield }}
   labels:
     name: nginx
     AppID: {{ AppID }}
-    ProjectKey: {{ PK }}
+    ProjectKey: {{ Projectkey }}
 spec:
   containers:
   - name: nginx
