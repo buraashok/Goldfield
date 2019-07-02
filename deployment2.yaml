@@ -8,7 +8,7 @@ metadata:
     projectkey: {{ projectkey }}
     AppID: {{ AppID }}
 spec:
-  replicas: 3
+  replicas: 0
   selector:
     matchLabels:
       app: nginx
