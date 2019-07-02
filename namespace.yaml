@@ -2,13 +2,13 @@
 - name: Generate template
   hosts: localhost
   tasks:
-  - name: value1 tag is incorrect
+  - name: invalid projectkey
     fail:
-      msg: "Label mismatch"
-    when: value1!="valueone"
+      msg: "please enter right projectkey as per bitbucket"
+    when: projectkey!="PH"
   - name: Failed due to wrong NS
     fail:
-      msg: "NS is not default NS"
+      msg: "namespace invalid"
     when: ns!="goldfield"
   - name: App id is wrong
     fail:
