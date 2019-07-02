@@ -6,14 +6,20 @@
     fail:
       msg: "please enter right projectkey as per bitbucket"
     when: projectkey!="PH"
+    
+    
   - name: Failed due to wrong NS
     fail:
       msg: "namespace invalid"
     when: ns!="goldfield"
+    
+    
   - name: App id is wrong
     fail:
       msg: " Please check your app id"
     when: AppID!="T001"
+    
+    
   - name: Generate pod template
     template:
       src: deployment.yaml
