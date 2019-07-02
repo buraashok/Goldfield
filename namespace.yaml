@@ -2,18 +2,18 @@
 - name: Generate template
   hosts: localhost
   tasks:
-  - name: value1 tag is incorrect
+  - name: namespace
     fail:
-      msg: "Label mismatch"
-    when: value1!="valueone"
-  - name: Failed due to wrong NS
+      msg: "Invalid namespace"
+    when: name!="goldfield"
+  - name: application id
     fail:
-      msg: "NS is not default NS"
-    when: ns!="default"
-  - name: App id is wrong
-    fail:
-      msg: " Please check your app id"
+      msg: "Invalid applicationid"
     when: AppID!="T001"
+  - name: Projectkey
+    fail:
+      msg: "Invalid projectkey"
+    when: Projectkey!="PH"
   - name: Generate pod template
     template:
       src: deployment.yaml
