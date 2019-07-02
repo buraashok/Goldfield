@@ -17,4 +17,4 @@
   - name: Generate pod template
     template:
       src: namespace.yaml
-      dest: namespace.yaml
+      dest: ./namespace.yaml
