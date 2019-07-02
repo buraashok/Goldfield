@@ -5,7 +5,7 @@
   - name: namespace
     fail:
       msg: "Invalid namespace"
-    when: name!="goldfield"
+    when: namespace!="goldfield"
   - name: application id
     fail:
       msg: "Invalid applicationid"
