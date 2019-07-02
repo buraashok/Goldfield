@@ -1,13 +1,15 @@
----
-- name: Generate template
-  hosts: localhost
-  tasks:
-  - name: fail build
-    #fail:
-    #  msg: "Label mismatch"
-    command: bash -c "exit 1"
-    when: value1!="valueone"
-  - name: Generate pod template
-    template:
-      src: deployment.yaml
-      dest: ./pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  namespace: {{ ns }}
+  labels:
+    name: nginx
+    tag1: {{ value1 }}
+    AppID: {{ AppID }}
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
