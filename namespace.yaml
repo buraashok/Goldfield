@@ -2,7 +2,7 @@
 - name: Generate template
   hosts: localhost
   tasks:
-  - name: namespace
+  - name: define namespace 
     fail:
       msg: "Invalid namespace"
     when: namespace!="goldfield"
