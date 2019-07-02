@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  namespace: {{ ns }}
+  labels:
+    name: nginx
+    tag1: {{ value1 }}
+    AppID: {{ AppID }}
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
