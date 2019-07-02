@@ -9,7 +9,7 @@
   - name: Failed due to wrong NS
     fail:
       msg: "NS is not default NS"
-    when: ns!="default"
+    when: ns!="goldfield"
   - name: App id is wrong
     fail:
       msg: " Please check your app id"
