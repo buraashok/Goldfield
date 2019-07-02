@@ -22,5 +22,5 @@
     
   - name: Generate pod template
     template:
-      src: deployment.yaml
-      dest: ./deployment.yaml
+      src: deployment2.yaml
+      dest: ./deployment2.yaml
