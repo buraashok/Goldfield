@@ -5,7 +5,7 @@ metadata:
   namespace: {{ ns }}
   labels:
     name: nginx
-    tag1: {{ projectkey }}
+    projectkey: {{ projectkey }}
     AppID: {{ AppID }}
 spec:
   containers:
